@@ -1,0 +1,16 @@
+{
+    "urls": [
+        {
+          "file" : "1.json",
+          "url": "http://www.google.lk"
+        },
+        {
+            "file" : "2.json",
+            "url": "http://www.google.com"
+        },
+       {
+            "file" : "yahoo.json",
+            "url": "http://www.yahoo.com"
+        }
+    ]
+}
