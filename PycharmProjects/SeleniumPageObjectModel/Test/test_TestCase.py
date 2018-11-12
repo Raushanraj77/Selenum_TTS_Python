@@ -1,5 +1,6 @@
 from Pages.HomePage import Home
 from Pages.RegistrationPage import Register
+import Utility.TextSpeechReporting
 import unittest
 import json
 from selenium import webdriver
@@ -21,9 +22,11 @@ class RegistrationTest(unittest.TestCase):
         driver = self.driver
 
         driver.get("http://newtours.demoaut.com/")
+        Utility.TextSpeechReporting.speechReporting("Navigated to site new tours")
         driver.set_page_load_timeout(20)
         m = Home(driver)
         m.getRegister().click()
+        Utility.TextSpeechReporting.speechReporting("Navigated to Register Page")
         r = Register(driver)
         r.setFirstName(data["userdata"]["newuser"]["firstname"])
         r.setLastName(data["userdata"]["newuser"]["lastname"])
